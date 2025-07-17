@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'hm' %}">Home</a></li>
+            <li><a href="{% url 'ab' %}">About</a></li>
+            <li><a href="{% url 'co' %}">Contact</a></li>
+            <li><a href="{% url 'se' %}">Service</a></li>
+            <li><a href="{% url 'contact_list' %}">Messages</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <p>We offer a wide range of services to meet your needs:</p>
+        <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>UI/UX Design</li>
+            <li>Digital Marketing</li>
+            <li>Cloud Solutions</li>
+        </ul>
+        <p>Contact us today to discuss how we can help your business grow!</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

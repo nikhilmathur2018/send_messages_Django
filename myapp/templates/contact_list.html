@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'hm' %}">Home</a></li>
+            <li><a href="{% url 'ab' %}">About</a></li>
+            <li><a href="{% url 'co' %}">Contact</a></li>
+            <li><a href="{% url 'se' %}">Service</a></li>
+            <li><a href="{% url 'contact_list' %}">Messages</a></li>
+        </ul>
+    </nav>
+
+    <div class="container contact-list">
+        <h2>Submitted Messages</h2>
+        {% if contacts %}
+            <ul>
+                {% for contact in contacts %}
+                    <li><strong>{{ contact.name }}</strong> ({{ contact.email }}) - {{ contact.message }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No messages submitted yet.</p>
+        {% endif %}
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

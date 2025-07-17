@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Messages</title>
+</head>
+<body>
+    <h1>Contact Messages</h1>
+    <ul>
+        {% for contact in contacts %}
+            <li><strong>{{ contact.name }}</strong> ({{ contact.email }}): {{ contact.message }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
